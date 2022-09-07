@@ -7,13 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7897366-a4de-49b4-b44b-c2014e2c6479" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Contacts.Persistence/PersistenceDependency.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/Base/BaseController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ReportController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Dto/Common/GuidReqDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Dto/Request/ContactDetailReqDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Dto/Request/ContactReqDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Dto/Response/ContactDetailResDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Dto/Response/ContactResDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Service/Contact/ContactSvc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Service/Contact/Interface/IContactSvc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contacts.Application/Wrapper/Response.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Application/ApplicationDependencies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/ApplicationDependencies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Application/Contacts.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Contacts.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Application/Service/BaseSvc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Service/BaseSvc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Application/Service/IDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Service/IDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Migration" />
       </map>
     </option>
   </component>
@@ -54,6 +65,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c72555df485eaeb73d76e6b4e7c39bfdc9fe8148df42d482ecce9aa755bd2/ApiBehaviorApplicationModelProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf95a2cbc284749e32a5e5bd1429f13a4287555cf44cd2f92de32ef7e72fe35/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Api/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -119,6 +132,8 @@
       <workItem from="1662544067518" duration="398000" />
       <workItem from="1662546103646" duration="5000" />
       <workItem from="1662546182975" duration="71000" />
+      <workItem from="1662548938590" duration="7047000" />
+      <workItem from="1662559145283" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1662544094160</created>
@@ -183,5 +198,50 @@
     <MESSAGE value="unused classes deleted" />
     <MESSAGE value="Entities added" />
     <option name="LAST_COMMIT_MESSAGE" value="Entities added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Contacts.Application/Service/Contact/ContactSvc.cs</url>
+          <line>54</line>
+          <properties documentPath="D:\Freelance\RiseTechnologyAssessment\Contacts.Application\Service\Contact\ContactSvc.cs" initialLine="54" containingFunctionPresentation="method 'GetContactById'">
+            <startOffsets>
+              <option value="2005" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2082" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactController.cs</url>
+          <line>38</line>
+          <properties documentPath="D:\Freelance\RiseTechnologyAssessment\Contacts.Api\Controllers\ContactController.cs" initialLine="38" containingFunctionPresentation="method 'GetAll'">
+            <startOffsets>
+              <option value="1175" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1234" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactController.cs</url>
+          <line>37</line>
+          <properties documentPath="D:\Freelance\RiseTechnologyAssessment\Contacts.Api\Controllers\ContactController.cs" initialLine="37" containingFunctionPresentation="method 'GetAll'">
+            <startOffsets>
+              <option value="1165" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1166" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

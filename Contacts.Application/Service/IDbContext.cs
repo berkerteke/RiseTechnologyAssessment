@@ -5,6 +5,7 @@ namespace Contacts.Application.Service;
 
 public interface IDbContext
 {
-    DbSet<Contact> Contacts { get; set; }
+    DbSet<Domain.Entity.Contact> Contacts { get; set; }
     DbSet<ContactDetail> ContactDetails { get; set; }
+    Task<int> SaveChangesAsync(CancellationToken token);
 }

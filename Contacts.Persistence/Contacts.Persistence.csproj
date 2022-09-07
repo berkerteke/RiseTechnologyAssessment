@@ -11,4 +11,11 @@
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.6" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Config" />
+      <Folder Include="Context" />
+      <Folder Include="Migrations" />
+      <Folder Include="Seed" />
+    </ItemGroup>
+
 </Project>

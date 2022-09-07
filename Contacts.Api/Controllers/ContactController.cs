@@ -34,7 +34,7 @@ public class ContactController : BaseController
         return await Execute(await _contactSvc.GetAllContacts());
     }
     [HttpGet("{Id:guid}")]
-    public async Task<ActionResult<IEnumerable<ContactResDto>>> GetContactById([From]Guid id)
+    public async Task<ActionResult<IEnumerable<ContactResDto>>> GetContactById(Guid id)
     {
         return await Execute(await _contactSvc.GetContactById(id));
     }

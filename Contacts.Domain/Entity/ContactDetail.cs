@@ -1,8 +1,9 @@
-﻿using Contacts.Domain.Enum;
+﻿using Contacts.Domain.Entity.Base;
+using Contacts.Domain.Enum;
 
 namespace Contacts.Domain.Entity;
 
-public class ContactDetail
+public class ContactDetail:BaseEntity
 {
     public ContactTypeEnum ContactType { get; set; }
     public string Content { get; set; }

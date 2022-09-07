@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{2DF5AD3E-0DD0-4E81-B78E-E7E15A66F006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Application", "Contacts.Application\Contacts.Application.csproj", "{C7E04DBA-5FD3-439C-9379-378E3CFA8E8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Application", "Contacts.Application\Contacts.Application.csproj", "{C7E04DBA-5FD3-439C-9379-378E3CFA8E8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{A696055A-559D-43A5-8A69-2F6A3ABCD01B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{A696055A-559D-43A5-8A69-2F6A3ABCD01B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Persistence", "Contacts.Persistence\Contacts.Persistence.csproj", "{F68097DE-B835-4D02-B300-45ADB2F679BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Persistence", "Contacts.Persistence\Contacts.Persistence.csproj", "{F68097DE-B835-4D02-B300-45ADB2F679BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{696683E7-6D5C-4420-BBBE-71395F9F21AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DF5AD3E-0DD0-4E81-B78E-E7E15A66F006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DF5AD3E-0DD0-4E81-B78E-E7E15A66F006}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DF5AD3E-0DD0-4E81-B78E-E7E15A66F006}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DF5AD3E-0DD0-4E81-B78E-E7E15A66F006}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7E04DBA-5FD3-439C-9379-378E3CFA8E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7E04DBA-5FD3-439C-9379-378E3CFA8E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E04DBA-5FD3-439C-9379-378E3CFA8E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{F68097DE-B835-4D02-B300-45ADB2F679BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F68097DE-B835-4D02-B300-45ADB2F679BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F68097DE-B835-4D02-B300-45ADB2F679BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696683E7-6D5C-4420-BBBE-71395F9F21AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696683E7-6D5C-4420-BBBE-71395F9F21AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696683E7-6D5C-4420-BBBE-71395F9F21AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696683E7-6D5C-4420-BBBE-71395F9F21AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

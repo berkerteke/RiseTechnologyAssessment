@@ -6,13 +6,14 @@
     <projectFile profileName="IIS Express">Contacts/Contacts.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7897366-a4de-49b4-b44b-c2014e2c6479" name="Changes" comment="unused classes deleted">
-      <change afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/Base/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Domain/Enum/ContactTypeEnum.cs" afterDir="false" />
+    <list default="true" id="b7897366-a4de-49b4-b44b-c2014e2c6479" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Contacts.Persistence/PersistenceDependency.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,7 @@
     </option>
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -35,12 +37,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1662544508" />
+                    <option name="branchName" value="Migration" />
+                    <option name="lastUsedInstant" value="1662545674" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="Nuget_Packages" />
-                    <option name="lastUsedInstant" value="1662544192" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1662544508" />
                   </RecentBranch>
                 </list>
               </option>
@@ -50,6 +52,9 @@
         </option>
       </RecentBranches>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -112,6 +117,8 @@
       <option name="presentableId" value="Default" />
       <updated>1662544063007</updated>
       <workItem from="1662544067518" duration="398000" />
+      <workItem from="1662546103646" duration="5000" />
+      <workItem from="1662546182975" duration="71000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1662544094160</created>
@@ -141,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662544347178</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Entities added">
+      <created>1662545649907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662545649907</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +181,7 @@
     <MESSAGE value="Layers added" />
     <MESSAGE value="nuget packages added" />
     <MESSAGE value="unused classes deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="unused classes deleted" />
+    <MESSAGE value="Entities added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entities added" />
   </component>
 </project>

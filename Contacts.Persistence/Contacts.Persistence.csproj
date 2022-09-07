@@ -13,9 +13,14 @@
 
     <ItemGroup>
       <Folder Include="Config" />
-      <Folder Include="Context" />
+      <Folder Include="Context\EntityConfigurations" />
       <Folder Include="Migrations" />
       <Folder Include="Seed" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contacts.Application\Contacts.Application.csproj" />
+      <ProjectReference Include="..\Contacts.Domain\Contacts.Domain.csproj" />
     </ItemGroup>
 
 </Project>

@@ -11,10 +11,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Dto" />
+      <Folder Include="Dto\Common" />
+      <Folder Include="Dto\Request" />
+      <Folder Include="Dto\Response" />
       <Folder Include="Factory" />
       <Folder Include="Mapping" />
-      <Folder Include="Service" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contacts.Domain\Contacts.Domain.csproj" />
     </ItemGroup>
 
 </Project>

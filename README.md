@@ -24,11 +24,9 @@ Rise Technology firması tarafından değerlendirilmek üzere hazırlanmıştır
 # Get Started
 
 1) [**PostgreSQL**](https://www.postgresql.org/)'nin ve [**Docker**](https://www.docker.com/)'ın bilgisayarınızda yüklü olduğundan emin olunuz ve aşağıdaki adımlara dikkat ediniz.
-	  1. ```bash
-docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management
-```
-	  2. **Contacts.API** içerisinde bulunan **appsettings.json** dosyasındaki **"ConnectionStrings"** içerisinde bulunan **User ID**, **Password** ve **Host** bilgilerini ve **"Options"** içerisinde bulunan **RabbitMqCon** bilgisini kendinize uygun şekilde düzenleyeniz. kendinize uygun şekilde düzenleyeniz.
-      3. **Reports.API** içerisinde bulunan **appsettings.json** dosyasındaki **"ConnectionStrings"** içerisinde bulunan **User ID**, **Password** ve **Host** bilgilerini ve **"Options"** içerisinde bulunan **RabbitMqCon** bilgisini kendinize uygun şekilde düzenleyeniz. kendinize uygun şekilde düzenleyeniz.
+	  1. docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management
+	  2. **Contacts.API** içerisinde bulunan **appsettings.json** dosyasındaki **"ConnectionStrings"** içerisinde bulunan **User ID**, **Password** ve **Host** bilgilerini ve **"Options"** içerisinde bulunan **RabbitMqConnectionString** bilgisini kendinize uygun şekilde düzenleyeniz. kendinize uygun şekilde düzenleyeniz.
+      3. **Reports.API** içerisinde bulunan **appsettings.json** dosyasındaki **"ConnectionStrings"** içerisinde bulunan **User ID**, **Password** ve **Host** bilgilerini ve **"Options"** içerisinde bulunan **RabbitMqConnectionString** bilgisini kendinize uygun şekilde düzenleyeniz. kendinize uygun şekilde düzenleyeniz.
 
    
 
@@ -43,7 +41,7 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-man
       ```bash
       dotnet run
       ```
-   ```
+
 
 
 

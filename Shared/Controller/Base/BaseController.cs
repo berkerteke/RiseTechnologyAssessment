@@ -1,26 +1,28 @@
-﻿using System.Collections;
+﻿using Microsoft.AspNetCore.Mvc;
+using Shared.Wrapper;
+using System.Collections;
 using System.Net;
-using Contacts.Application.Wrapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+using System.Web.Http;
 
 namespace Contacts.Controllers.Base;
 
 [ApiController]
-[Route("api/[controller]")]
+[Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
 [AllowAnonymous]
 public class BaseController : ControllerBase
 {
     protected async Task<ActionResult> Execute<T>(BaseApiResponse<T> response)
     {
-        if (response.Data is null)
+        if (response == null)
+            return BadRequest();
+        if ( response.Data is null)
         {
             response.StatusCode = (int)HttpStatusCode.NotFound;
             response.Succeeded = true;
             if (string.IsNullOrEmpty(response.Message)) response.Message = "Not Found!";
             return NotFound(response);
         }
-        if (response.Data.GetType().GUID == typeof(List<>).GUID)
+        if ( response.Data.GetType().GUID == typeof(List<>).GUID)
         {
             if (response.Data is IList { Count: 0 })
                 return NoContent();

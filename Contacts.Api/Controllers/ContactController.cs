@@ -1,32 +1,41 @@
-﻿using Contacts.Application.Dto.Common;
-using Contacts.Application.Dto.Request;
-using Contacts.Application.Dto.Response;
-using Contacts.Application.Service.Contact.Interface;
+﻿using Contacts.Application.Service.Contact.Interface;
+using Contacts.Constants;
 using Contacts.Controllers.Base;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Shared;
+using Shared.Dto.Common;
+using Shared.Dto.Request;
+using Shared.Dto.Response;
 
 namespace Contacts.Controllers;
 
 public class ContactController : BaseController
 {
     private readonly IContactSvc _contactSvc;
-
-    public ContactController(IContactSvc contactSvc)
+    private readonly ContactSettings _contactSettings;
+    public ContactController(IContactSvc contactSvc, IOptions<ContactSettings> options)
     {
         _contactSvc = contactSvc;
+        _contactSettings = options.Value;
     }
 
     [HttpPost]
-    public async Task<ActionResult<bool>> Create([FromBody] ContactReqDto dto)
+    public async Task<ActionResult<ContactResDto>> Create([FromBody] ContactReqDto dto)
     {
-        return await Execute(await _contactSvc.CreateContact(dto));
+        if (dto == null) return BadRequest();
+        var result = await _contactSvc.CreateContact(dto);
+        QueueSender.Send(result.Data, QueueTypeEnum.ContactCreated, _contactSettings.RabbitMqConnectionString);
+        return await Execute(result);
     }
 
     [HttpDelete]
-    public async Task<ActionResult<bool>> Delete([FromBody] GuidReqDto guid)
+    public async Task<ActionResult<Guid>> Delete([FromBody] GuidReqDto guid)
     {
-        return await Execute(await _contactSvc.DeleteContact(guid.Id));
+        if (guid == null) return BadRequest();
+        var result = await _contactSvc.DeleteContact(guid.Id);
+        QueueSender.Send(result.Data, QueueTypeEnum.ContactDeleted, _contactSettings.RabbitMqConnectionString);
+        return await Execute(result);
     }
     [HttpGet("GetAll")]
     public async Task<ActionResult<IEnumerable<ContactResDto>>> GetAll()
@@ -42,12 +51,17 @@ public class ContactController : BaseController
     [HttpPost("ContactDetail")]
     public async Task<ActionResult<bool>> AddContactDetail([FromBody] ContactDetailReqDto dto)
     {
-        return await Execute(await _contactSvc.AddContactDetail(dto));
+        if (dto == null) return BadRequest();
+        var result = await _contactSvc.AddContactDetail(dto);
+        QueueSender.Send(result.Data, QueueTypeEnum.DetailCreated, _contactSettings.RabbitMqConnectionString);
+        return await Execute(result);
     }
     [HttpDelete("ContactDetail/{Id:guid}")]
     public async Task<ActionResult<bool>> RemoveContactDetail(Guid id)
     {
-        return await Execute(await _contactSvc.RemoveContactDetail(id));
+        var result = await _contactSvc.RemoveContactDetail(id);
+        QueueSender.Send(result.Data, QueueTypeEnum.DetailDeleted, _contactSettings.RabbitMqConnectionString);
+        return await Execute(result);
     }
     [HttpGet("ContactDetail")]
     public async Task<ActionResult<ContactDetailResDto>> ContactDetailById(Guid id)

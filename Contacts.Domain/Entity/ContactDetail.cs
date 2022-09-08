@@ -1,5 +1,5 @@
 ﻿using Contacts.Domain.Entity.Base;
-using Contacts.Domain.Enum;
+using Shared.Dto;
 
 namespace Contacts.Domain.Entity;
 

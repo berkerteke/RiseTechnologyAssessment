@@ -1,4 +1,5 @@
 using Contacts.Application;
+using Contacts.Constants;
 using Contacts.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddPersistenceService(builder.Configuration);
 builder.Services.AddApplicationService(builder.Configuration);
+builder.Services.Configure<ContactSettings>(builder.Configuration.GetSection("Options"));
 
 var app = builder.Build();
 

@@ -1,4 +1,4 @@
-﻿namespace Contacts.Application.Wrapper;
+﻿namespace Shared.Wrapper;
 
 public class BaseApiResponse<T>
 {
@@ -10,7 +10,8 @@ public class BaseApiResponse<T>
 
     public BaseApiResponse(List<T> data, string message)
     {
-        Data = data;
+        if (data.Any())
+            Data = data;
         Message = message;
     }
 

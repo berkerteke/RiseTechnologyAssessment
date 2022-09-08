@@ -1,9 +1,10 @@
-﻿using Contacts.Application.Dto.Request;
-using Contacts.Application.Dto.Response;
+﻿
 using Contacts.Application.Service.Contact.Interface;
-using Contacts.Application.Wrapper;
 using Contacts.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
+using Shared.Dto.Request;
+using Shared.Dto.Response;
+using Shared.Wrapper;
 
 namespace Contacts.Application.Service.Contact;
 
@@ -13,7 +14,7 @@ public class ContactSvc : BaseSvc, IContactSvc
     {
     }
 
-    public async Task<SingleDataResponse<bool>> CreateContact(ContactReqDto dto)
+    public async Task<SingleDataResponse<ContactResDto>> CreateContact(ContactReqDto dto)
     {
         var contact = new Domain.Entity.Contact
         {
@@ -23,19 +24,27 @@ public class ContactSvc : BaseSvc, IContactSvc
         };
         await _dbContext.Contacts.AddAsync(contact);
         await _dbContext.SaveChangesAsync(CancellationToken.None);
-        return new SingleDataResponse<bool>(true, message: "Başarıyla Eklendi!");
+        var result = new ContactResDto
+        {
+            Id = contact.Id,
+            Name = contact.Name,
+            CompanyName = contact.CompanyName,
+            Surname = contact.Surname
+
+        };
+        return new SingleDataResponse<ContactResDto>(result, message: "Başarıyla Eklendi!");
     }
 
-    public async Task<SingleDataResponse<bool>> DeleteContact(Guid id)
+    public async Task<SingleDataResponse<Guid>> DeleteContact(Guid id)
     {
         var contact = _dbContext.Contacts.FirstOrDefault(i => i.Id == id);
         if (contact == null)
-            return new SingleDataResponse<bool>(false, message: "Silinecek Kişi Bulunamadı!");
+            return new SingleDataResponse<Guid>(id, message: "Silinecek Kişi Bulunamadı!");
         var details = _dbContext.ContactDetails.Where(i => i.ContactId == id).ToList();
         _dbContext.ContactDetails.RemoveRange(details);
         _dbContext.Contacts.Remove(contact);
         await _dbContext.SaveChangesAsync(CancellationToken.None);
-        return new SingleDataResponse<bool>(true, message: "Kişi Ve Detayları Başarıyla Silindi");
+        return new SingleDataResponse<Guid>(id, message: "Kişi Ve Detayları Başarıyla Silindi");
     }
 
     public async Task<ListDataResponse<ContactResDto>> GetAllContacts()
@@ -65,7 +74,7 @@ public class ContactSvc : BaseSvc, IContactSvc
         });
     }
 
-    public async Task<SingleDataResponse<bool>> AddContactDetail(ContactDetailReqDto dto)
+    public async Task<SingleDataResponse<ContactDetailResDto>> AddContactDetail(ContactDetailReqDto dto)
     {
         var detail = new ContactDetail
         {
@@ -75,18 +84,24 @@ public class ContactSvc : BaseSvc, IContactSvc
         };
         await _dbContext.ContactDetails.AddAsync(detail);
         await _dbContext.SaveChangesAsync(CancellationToken.None);
-        return new SingleDataResponse<bool>(true, "Detay Başarıyla Eklendi");
+        var result = new ContactDetailResDto
+        {
+            ContactId = dto.ContactId,
+            ContactType = dto.ContactType,
+            Content = dto.Content
+        };
+        return new SingleDataResponse<ContactDetailResDto>(result, "Detay Başarıyla Eklendi");
     }
 
-    public async Task<SingleDataResponse<bool>> RemoveContactDetail(Guid id)
+    public async Task<SingleDataResponse<Guid>> RemoveContactDetail(Guid id)
     {
         var detail = _dbContext.ContactDetails.FirstOrDefault(i => i.Id == id);
         if (detail == null)
-            return new SingleDataResponse<bool>(false, "Silinecek Kayıt Bulunamadı!");
+            return new SingleDataResponse<Guid>(id, "Silinecek Kayıt Bulunamadı!");
         
         _dbContext.ContactDetails.Remove(detail);
         await _dbContext.SaveChangesAsync(CancellationToken.None);
-        return new SingleDataResponse<bool>(true, "Detay Başarıyla Silindi");
+        return new SingleDataResponse<Guid>(id, "Detay Başarıyla Silindi");
     }
 
     public async Task<SingleDataResponse<ContactDetailResDto>> GetContactDetailById(Guid id)

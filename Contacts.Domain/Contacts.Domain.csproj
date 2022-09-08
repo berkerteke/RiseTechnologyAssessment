@@ -8,7 +8,12 @@
 
     <ItemGroup>
       <Folder Include="Constant" />
+      <Folder Include="Enum\" />
       <Folder Include="Exception" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
 </Project>

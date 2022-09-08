@@ -8,71 +8,8 @@
     <projectFile profileName="IIS Express">Reports.Api/Reports.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7897366-a4de-49b4-b44b-c2014e2c6479" name="Changes" comment="endpoint fix">
-      <change afterPath="$PROJECT_DIR$/Contacts.Tests/Contacts.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Tests/Controllers/ContactControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Tests/Helpers/TestHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Tests/Services/ContactServiceTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/Controllers/ReportController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/RabbitMqService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/Reports.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/ApplicationDependencies.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/IDbReportContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/Reports.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/Service/BaseSvc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/Service/Contact/ContactReportSvc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Application/Service/Contact/Interface/IContactReportSvc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Domain/Entity/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Domain/Entity/ContactDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Domain/Entity/Report.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Domain/Reports.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Migrations/20220907195438_Initial.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Migrations/20220907195438_Initial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Migrations/20220908093827_Report.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Migrations/20220908093827_Report.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Migrations/DbReportContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/ReportPersistenceDependency.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports.Persistence/Reports.Persistence.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/ContactSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Controller/Base/BaseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/Common/GuidReqDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/ContactTypeEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/Request/ContactDetailReqDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/Request/ContactReqDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/Response/ContactDetailResDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Dto/Response/ContactResDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/EnumExtensionMethods.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/QueueSender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/QueueTypeEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Shared.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shared/Wrapper/Response.cs" afterDir="false" />
+    <list default="true" id="b7897366-a4de-49b4-b44b-c2014e2c6479" name="Changes" comment="CRUD operations for Contacts added">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/Base/BaseController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ReportController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Contacts.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Contacts.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Dto/Common/GuidReqDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Dto/Request/ContactDetailReqDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Dto/Request/ContactReqDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Dto/Response/ContactDetailResDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Dto/Response/ContactResDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Service/Contact/ContactSvc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Service/Contact/ContactSvc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Service/Contact/Interface/IContactSvc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Application/Service/Contact/Interface/IContactSvc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Application/Wrapper/Response.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Entity/Base/BaseEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Entity/ContactDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Enum/ContactTypeEnum.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,12 +53,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c72555df485eaeb73d76e6b4e7c39bfdc9fe8148df42d482ecce9aa755bd2/ApiBehaviorApplicationModelProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf95a2cbc284749e32a5e5bd1429f13a4287555cf44cd2f92de32ef7e72fe35/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Api/Controllers/ContactController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Api/Controllers/ContactController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Api/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Application/ApplicationDependencies.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Application/Service/BaseSvc.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Application/Service/Contact/ContactSvc.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Application/Service/Contact/Interface/IContactSvc.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Application/Service/IDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Freelance/RiseTechnologyAssessment/Contacts.Domain/Entity/ContactDetail.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
